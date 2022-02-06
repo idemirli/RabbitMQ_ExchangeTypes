@@ -15,6 +15,8 @@ namespace SampleRabbitMQ.Subscriber
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
+                channel.BasicQos(0, 1, false);
+                var consumer = new EventingBasicConsumer(channel);
                 // channel.QueueDeclare("hello-queue", true, false, false);
 
                 #region [BasicQos Parameters Properties]
@@ -23,33 +25,32 @@ namespace SampleRabbitMQ.Subscriber
                 //global : PrefetchCount ne kadarsa o kadar sayıda mesajı var olan Subscriber'lara dağıtır.
                 #endregion
 
-
-                #region [Fanout Exchange]
-                var randomQueueName = channel.QueueDeclare().QueueName; //Random kuyruk ismi oluşturmk için.
-
-                #region [Kuyruğu kalıcı hale getirmek için]
-                //channel.QueueDeclare("log-database-save", true, false, false); //Kalıcı hale getirmek için
-                #endregion
-
-
-                channel.QueueBind(randomQueueName, "logs-fanout", "", null); //Bu kuyruğu exchange'e bind edeceğim.(yeni kuyruk oluşturmuyorum.)
-
-                channel.BasicQos(0, 1, false);
-                var consumer = new EventingBasicConsumer(channel);
-
-                channel.BasicConsume(randomQueueName, false, consumer);
-                Console.WriteLine("Loglar dinleniyor.");
-
-                #endregion
-
-
                 #region [Not Exchange]
-                //channel.BasicQos(0, 1, false);
-                //var consumer = new EventingBasicConsumer(channel);
+
 
                 //channel.BasicConsume("hello-queue", false, consumer); //autoAck :True  mesaj Subscriber'a gittiğinde otomatik olarak mesajı siler.
                 #endregion
 
+                #region [Fanout Exchange]
+                /* var randomQueueName = channel.QueueDeclare().QueueName;*/ //Random kuyruk ismi oluşturmk için.
+
+                #region [Kuyruğu kalıcı hale getirmek için]
+                //channel.QueueDeclare("log-database-save", true, false, false); //Kalıcı hale getirmek için kuyruk oluşturulur.
+                #endregion
+
+
+                /* channel.QueueBind(randomQueueName, "logs-fanout", "", null);*/ //Bu kuyruğu exchange'e bind edeceğim.(yeni kuyruk oluşturmuyorum.)
+
+                //channel.BasicConsume(randomQueueName, false, consumer);
+                //Console.WriteLine("Loglar dinleniyor.");
+
+                #endregion
+
+                #region [Direct Exchange]
+                var queueName = "direct-queue-critical";
+                channel.BasicConsume(queueName, false, consumer);
+                Console.WriteLine("Loglar dinleniyor.");
+                #endregion
 
 
                 consumer.Received += (object sender, BasicDeliverEventArgs e) => //RabbitMQ subscriber'a mesaj geldiğinde bu event çalışır.
