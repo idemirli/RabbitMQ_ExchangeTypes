@@ -1,0 +1,17 @@
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.exe
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.deps.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.runtimeconfig.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.runtimeconfig.dev.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\ref\SampleRabbitMQ.Publisher.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\SampleRabbitMQ.Publisher.pdb
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.GeneratedMSBuildEditorConfig.editorconfig
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.AssemblyInfoInputs.cache
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.AssemblyInfo.cs
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.csproj.CoreCompileInputs.cache
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\ref\SampleRabbitMQ.Publisher.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.pdb
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.genruntimeconfig.cache
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Publisher\obj\Debug\net5.0\SampleRabbitMQ.Publisher.csproj.CopyComplete

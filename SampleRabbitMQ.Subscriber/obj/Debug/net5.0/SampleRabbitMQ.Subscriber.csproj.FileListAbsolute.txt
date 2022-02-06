@@ -1,0 +1,17 @@
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.exe
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.deps.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.runtimeconfig.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.runtimeconfig.dev.json
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\ref\SampleRabbitMQ.Subscriber.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\SampleRabbitMQ.Subscriber.pdb
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.GeneratedMSBuildEditorConfig.editorconfig
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.AssemblyInfoInputs.cache
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.AssemblyInfo.cs
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.csproj.CoreCompileInputs.cache
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.csproj.CopyComplete
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\ref\SampleRabbitMQ.Subscriber.dll
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.pdb
+D:\RabbitMQ\SampleRabbitMQ\SampleRabbitMQ.Subscriber\obj\Debug\net5.0\SampleRabbitMQ.Subscriber.genruntimeconfig.cache
