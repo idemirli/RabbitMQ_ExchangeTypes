@@ -80,9 +80,6 @@ namespace SampleRabbitMQ.Publisher
                 #endregion
 
 
-
-
-
                 Console.ReadLine();
             }
         }
