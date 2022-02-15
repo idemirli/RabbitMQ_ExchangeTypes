@@ -1,7 +1,10 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Shared;
 using System;
+using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
 
 namespace SampleRabbitMQ.Subscriber
@@ -36,6 +39,7 @@ namespace SampleRabbitMQ.Subscriber
 
                 #region [Kuyruğu kalıcı hale getirmek için]
                 //channel.QueueDeclare("log-database-save", true, false, false); //Kalıcı hale getirmek için kuyruk oluşturulur.
+                //Eğer Subscriber düşünce kuyrukta gitsin istiyorsak bunu kullanmamıza gerek yok 
                 #endregion
 
 
@@ -47,9 +51,54 @@ namespace SampleRabbitMQ.Subscriber
                 #endregion
 
                 #region [Direct Exchange]
-                var queueName = "direct-queue-critical";
+                //var queueName = "direct-queue-critical";
+                //channel.BasicConsume(queueName, false, consumer);
+                //Console.WriteLine("Loglar dinleniyor.");
+                #endregion
+
+                #region [Topic Exchange]
+                //optinal //channel.ExchangeDeclare("logs-topic", durable: true, type: ExchangeType.Topic); //Publisher tarafında oluşturduğum için, burda da aynı değerlerle oluşturursam hata almam.
+
+                //var queueName = channel.QueueDeclare().QueueName;
+                //var routeKey = "*.error.*";
+                //channel.QueueBind(queueName, "logs-topic", routeKey);
+                //channel.BasicConsume(queueName, false, consumer);
+                //Console.WriteLine("Loglar dinleniyor");
+                #endregion
+
+                #region [Header Exchange]
+
+                //var queueName = channel.QueueDeclare().QueueName;
+                //Dictionary<string, object> headers = new Dictionary<string, object>();
+                //headers.Add("format", "pdf");
+                //headers.Add("shape", "a4");
+                //headers.Add("x-match", "any");
+                //channel.QueueBind(queueName, "header-exchange", string.Empty, headers);
+                //channel.BasicConsume(queueName, false, consumer);
+                //Console.WriteLine("Loglar dinleniyor");
+                #endregion
+
+                #region [Mesajları Kalıcı Hale Getirmek (Örnek : Header Exchange)]
+                //Puplisher tarafında ayar yapıldı.
+                //var queueName = channel.QueueDeclare().QueueName;
+                //Dictionary<string, object> headers = new Dictionary<string, object>();
+                //headers.Add("format", "pdf");
+                //headers.Add("shape", "a4");
+                //headers.Add("x-match", "any");
+                //channel.QueueBind(queueName, "header-exchange", string.Empty, headers);
+                //channel.BasicConsume(queueName, false, consumer);
+                //Console.WriteLine("Loglar dinleniyor");
+                #endregion
+
+                #region [Complex Type'ları Mesaj Olarak İletmek (Örnek : Header Exchange)]
+                var queueName = channel.QueueDeclare().QueueName;
+                Dictionary<string, object> headers = new Dictionary<string, object>();
+                headers.Add("format", "pdf");
+                headers.Add("shape", "a4");
+                headers.Add("x-match", "any");
+                channel.QueueBind(queueName, "header-exchange", string.Empty, headers);
                 channel.BasicConsume(queueName, false, consumer);
-                Console.WriteLine("Loglar dinleniyor.");
+                Console.WriteLine("Loglar dinleniyor");
                 #endregion
 
 
@@ -57,11 +106,16 @@ namespace SampleRabbitMQ.Subscriber
                 {
                     var message = Encoding.UTF8.GetString(e.Body.ToArray());
 
+                    #region [Complext Type mesajları almak için]
+                    //Car car = JsonSerializer.Deserialize<Car>(message);
+                    //Console.Write($"Gelen mesaj :{car.name}-{car.price}");
+                    #endregion
+
                     Thread.Sleep(1000);
                     Console.WriteLine("Gelen Mesaj: " + message);
 
                     channel.BasicAck(e.DeliveryTag, false); //RabbitMQ dan gelen mesajı DeliveryTag ile aldığımızı belirtiyoruz. Amaç : Mesajını okunduğunu belirtip ondan sonra silme işlemini yapmak.
-                }; 
+                };
 
                 Console.ReadLine();
             }

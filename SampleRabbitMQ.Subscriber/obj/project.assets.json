@@ -32,6 +32,16 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -101,11 +111,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "RabbitMQ.Client >= 6.2.2"
+      "RabbitMQ.Client >= 6.2.2",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -116,11 +132,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RabbitMQ\\SampleRabbitMQ\\SampleRabbitMQ.Subscriber\\SampleRabbitMQ.Subscriber.csproj",
+      "projectUniqueName": "D:\\AspNetCoreWork\\SampleRabbitMQ\\RabbitMQ_WorkSpace-master\\RabbitMQ_WorkSpace-master\\SampleRabbitMQ.Subscriber\\SampleRabbitMQ.Subscriber.csproj",
       "projectName": "SampleRabbitMQ.Subscriber",
-      "projectPath": "D:\\RabbitMQ\\SampleRabbitMQ\\SampleRabbitMQ.Subscriber\\SampleRabbitMQ.Subscriber.csproj",
+      "projectPath": "D:\\AspNetCoreWork\\SampleRabbitMQ\\RabbitMQ_WorkSpace-master\\RabbitMQ_WorkSpace-master\\SampleRabbitMQ.Subscriber\\SampleRabbitMQ.Subscriber.csproj",
       "packagesPath": "C:\\Users\\ibrhm\\.nuget\\packages\\",
-      "outputPath": "D:\\RabbitMQ\\SampleRabbitMQ\\SampleRabbitMQ.Subscriber\\obj\\",
+      "outputPath": "D:\\AspNetCoreWork\\SampleRabbitMQ\\RabbitMQ_WorkSpace-master\\RabbitMQ_WorkSpace-master\\SampleRabbitMQ.Subscriber\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -141,7 +157,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\AspNetCoreWork\\SampleRabbitMQ\\RabbitMQ_WorkSpace-master\\RabbitMQ_WorkSpace-master\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\AspNetCoreWork\\SampleRabbitMQ\\RabbitMQ_WorkSpace-master\\RabbitMQ_WorkSpace-master\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
