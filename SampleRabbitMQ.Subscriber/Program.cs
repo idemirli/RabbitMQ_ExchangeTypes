@@ -101,7 +101,7 @@ namespace SampleRabbitMQ.Subscriber
                 Console.WriteLine("Loglar dinleniyor");
                 #endregion
 
-                //
+                //End
 
 
                 consumer.Received += (object sender, BasicDeliverEventArgs e) => //RabbitMQ subscriber'a mesaj geldiğinde bu event çalışır.
