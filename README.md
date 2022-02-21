@@ -1,6 +1,4 @@
-# AspNetCore_RabbitMQ
-
-Asp.Net Core Implementation Of RabbitMQ 
+# Asp.Net Core Implementation Of RabbitMQ 
 Work Queue
 EXCHANGE TYPES
 1. Direct Exchange
